@@ -1,0 +1,82 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+h1 {
+    width: 100%;
+    background-color: darkblue;
+    color: aliceblue;
+    padding: 24px;
+    font-size: 38px;
+}
+
+.form-area {
+    background-color: azure;
+}
+
+.input-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 60px;
+}
+
+.input-area {
+    margin-top: 32px;
+}
+
+label {
+    font-size: 24px;
+}
+
+input {
+    width: 180px;
+    height: 32px;
+    font-size: 18px;
+}
+
+select {
+    width: 50px;
+    height: 32px;
+}
+
+button {
+    width: 100px;
+    height: 32px;
+    font-size: 18px;
+    margin-top: 40px;
+    background-color: darkblue;
+    color: azure;
+    border-radius: 6px;
+    border: 1px solid darkblue;
+}
+
+.output-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+table {
+    font-size: 32px;
+}
+
+th {
+    font-size: 32px;
+    padding: 20px 30px;
+    background-color: beige;
+    text-decoration: underline;
+}
+
+td {
+    font-size: 20px;
+    text-align: center;
+    padding: 6px 0;
+    border-bottom: 1px solid black;
+}
