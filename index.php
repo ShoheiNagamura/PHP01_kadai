@@ -1,5 +1,5 @@
 <?php
-
+//最初に表示したいHTMLを用意
 $str = '
 <tr>
     <th>氏名</th>
@@ -15,18 +15,17 @@ $str = '
 
 // ファイルを開く（読み取り専用）
 $file = 'data/fish_sale.csv';
-// echo $file;
 
-
+//ファイルが存在していれば実行、file_exists()関数
 if (file_exists($file)) {
-    // ファイルをロック
+    // ファイルをを開きファイルをロック
     $file = fopen($file, 'r');
     flock($file, LOCK_EX);
 
     // fgets()で1行ずつ取得→$lineに格納
     if ($file) {
         while ($line = fgetcsv($file)) {
-            // 取得したデータを`$str`に追加する
+            // 取得したデータを`$str`に追記。
             $str .= "
                 <tr>
                     <td>$line[0]</td>
@@ -70,7 +69,7 @@ if (file_exists($file)) {
 
 <body>
     <h1>水揚げ情報管理サイト</h1>
-
+    <!-- 入力フォームエリア -->
     <div class="form-area">
         <form class="input-form" action="create.php" method="POST">
             <h2>ーー入力画面ーー</h2>
@@ -105,7 +104,7 @@ if (file_exists($file)) {
             <button>登録</button>
         </form>
     </div>
-
+    <!-- 表示エリア -->
     <div class="output-area">
         <table>
             <?= $str ?>
